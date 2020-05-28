@@ -1,0 +1,12 @@
+.features{
+  text-align: center;
+
+}
+
+#features{
+  position:relative;
+  background-color:white;
+  z-index:1;
+  padding:7% 15%;
+
+}

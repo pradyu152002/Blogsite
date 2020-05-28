@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Your Blog</title>
+  <link rel="stylesheet" href="/css/userPageStyles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <div class="jumbotron">
+    <h1 class="display-4"><%= usersName%></h1>
+    <hr class="my-4">
+    <!-- idhar hai bootstrap wala -->
+
+ </div>
+
+
+
+      <a class="nav-link" href="/admin">Back to admin</a>
+
+
+  <!-- view blogs -->
+  <% users.forEach(function(user){ %>
+  <% if(user.name===usersName){ %>
+  <% user.blogs.forEach(function(post){ %>
+
+  <div class="jumbotron jumbotron-fluid" style="width:70%;margin-left:15%">
+    <div class="container">
+      <h1 class="display-4"><%=post.title%></h1>
+      <p class="lead"><%=post.post%></p>
+    </div>
+  </div>
+
+  <% });%>
+
+  <% } %>
+  <% }); %>
+
+
+</body>
+
+</html>
