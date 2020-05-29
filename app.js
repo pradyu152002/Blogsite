@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.set("view engine", "ejs");
-mongoose.connect("mongodb://localhost:27017/blogUserDB", {
+mongoose.connect("mongodb+srv://admin-pradyumna:Predjumna@2002$@cluster0-x867a.mongodb.net/blogUserDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
